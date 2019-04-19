@@ -1,6 +1,10 @@
 /node_modules
 
-/build
+packages/server/build
+packages/server/.cache
+packages/server/public
+packages/client/build
+packages/client/.cache
 
 .DS_Store
 .env.local
