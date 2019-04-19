@@ -1,4 +1,4 @@
-import { save } from './fileStorage';
+import saveFile from '../utils/saveFile';
 
 export default {
   Mutation: {
@@ -6,7 +6,7 @@ export default {
       try {
         // load files to fs
         const uploadedFiles = await Promise.all(
-          files.map(async (uploadPromise: any) => save(await uploadPromise, 'public'))
+          files.map(async (uploadPromise: any) => saveFile(await uploadPromise, 'public'))
         );
         // return filename and path to file
         return uploadedFiles;
